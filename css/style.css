@@ -1,3 +1,15 @@
 /* Main CSS Styles shared among all? pages */
 
-/* TODO */
+.menu-container {
+  /* Layout the navigation menu horizontally */
+  display: flex;
+}
+
+.menu-container > li {
+  /* Remove the disc/bullet before each list items in the navigation menu */
+  list-style-type: none;
+
+  /* Add a bit of space between items of the navigation menu */
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
