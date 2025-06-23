@@ -1,1 +1,1 @@
-# project-friends-site
+# fansite-project
