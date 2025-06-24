@@ -1,1 +1,12 @@
 /* Styles for Mika Mendes (fansite1) */
+
+/* ~~~~~ Color Theme */
+
+:root {
+  /* Soft light purple colors as Mika's repertoire contains many love songs */
+  --color-background: #D8BFD8;
+  --color-text: #333333;
+  --color-heading: #4B0082;
+  --color-link: #800080;
+  --color-accent: #BA55D3;
+}

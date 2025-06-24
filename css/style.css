@@ -1,5 +1,32 @@
 /* Main CSS Styles shared among all? pages */
 
+/* ~~~~~ Color Theme */
+
+:root {
+  --color-background: white;
+  --color-text: black;
+  --color-heading: black;
+  --color-link: blue;
+  --color-accent: blue;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover, button:hover {
+  color: var(--color-accent);
+}
+
 h1 {
   text-align: center;
 }
