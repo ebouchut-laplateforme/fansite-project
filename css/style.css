@@ -1,5 +1,9 @@
 /* Main CSS Styles shared among all? pages */
 
+h1 {
+  text-align: center;
+}
+
 .menu-container {
   /* Layout the navigation menu horizontally */
   display: flex;
@@ -12,4 +16,10 @@
   /* Add a bit of space between items of the navigation menu */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.tagline {
+  font-size: smaller;
+  font-style: italic;
+  text-align: center;
 }
