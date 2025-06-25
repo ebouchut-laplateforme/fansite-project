@@ -43,6 +43,7 @@ h1 {
   /* Remove the disc/bullet before each list items in the navigation menu */
   list-style-type: none;
 
+
   /* Add a bit of space between items of the navigation menu */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -54,15 +55,29 @@ h1 {
   text-align: center;
 }
 
-.artist-photo {
-  /* Override in fansite CSS */
-}
-
-.bio-container {
+.about-container {
   display: flex;
   justify-content: left;
+  gap: 0.5rem;
 }
 
+.about-item-text {
+  /* cannot grow, can shrink, width 70% initially */
+  flex: 0 1 70%;
+}
+
+.about-item-photo {
+  /* can grow and shrink, width 30% initially */
+  flex: 1 1 30%;
+}
+
+.artist-photo {
+  /* Can be overridden in the fansite CSS */
+  max-width: 100%;
+  height: auto;
+
+  border: 0.3rem solid;
+}
 
 /*
   ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,31 +87,20 @@ h1 {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
-
-
 @media screen and (width >=1024px) {
   /* Desktop */
-
-  .artist-photo {
-    width:  30%;
-    height: 30%;
-  }
 }
 
 @media screen and (768px <=width < 1024px) {
   /* Tablet */
-
-  .artist-photo {
-    width:  25%;
-    height: 25%;
-  }
+  
 }
 
 @media screen and (width < 768px) {
   /* Mobile */
 
-  .artist-photo {
-    width:  20%;
-    height: 20%;
+  .about-container {
+    /* TODO: Consider using another flex layout to bubble the image up */ 
+    flex-wrap: wrap;
   }
 }
