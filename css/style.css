@@ -136,4 +136,14 @@ ol.timeline > li::before {
     /* TODO: Consider using another flex layout to bubble the image up */ 
     flex-wrap: wrap;
   }
+
+    .about-item-text {
+      /* Set width back to 100% */
+      flex: initial;
+    }
+
+    .about-item-photo {
+      /* Set width back to 100% */
+      flex: initial;
+    }
 }
