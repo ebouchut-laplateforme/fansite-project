@@ -8,6 +8,7 @@
   --color-heading: black;
   --color-link: blue;
   --color-accent: blue;
+  --color-border: #f0e5f0  ;
 }
 
 body {
@@ -85,9 +86,11 @@ ol.timeline > li::before {
   height: 14px;
   border-radius: 50%;
 
-  border: 2px solid var(--color-heading);
+  border: 2px solid var(--color-border);
   background: var(--color-accent);
 }
+
+/* ~~~~ About section  */
 
 .about-container {
   display: flex;
@@ -110,7 +113,16 @@ ol.timeline > li::before {
   max-width: 100%;
   height: auto;
 
-  border: 0.3rem solid var(--color-accent);
+  border: 0.3rem solid var(--color-border);
+}
+
+/* ~~~~ Explore section  */
+
+.pages-list dt {
+  display: inline-block;
+}
+.pages-list dt:hover {
+  background-color: var(--color-border);
 }
 
 /*
