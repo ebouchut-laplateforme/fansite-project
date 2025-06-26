@@ -37,13 +37,13 @@ h1 {
   /* Layout the navigation menu horizontally */
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+
+  /* Remove the disc/bullet before each list items in the navigation menu */
+  list-style-type: none;
 }
 
 .menu-container > li {
-  /* Remove the disc/bullet before each list items in the navigation menu */
-  list-style-type: none;
-
-
   /* Add a bit of space between items of the navigation menu */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
