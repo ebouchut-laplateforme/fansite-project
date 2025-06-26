@@ -55,6 +55,39 @@ h1 {
   text-align: center;
 }
 
+/* ~~~~ (Career) Timeline */
+
+ol.timeline {
+  position: relative;
+  padding-left: 40px;
+
+  /* Remove the numeric index in front of the list items */
+  list-style: none;
+}
+
+ol.timeline::before {
+  content: ""; /* Add a pseudo element that serves as an "anchor" to  position ol on the left */ 
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-heading);
+}
+
+ol.timeline > li::before {
+  content: "";
+  position: absolute;
+  left: 13px; /* Shift left ~ the same size as the circle below */
+  /* (width == height) + border-radius = 50% => circle! */
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+
+  border: 2px solid var(--color-heading);
+  background: var(--color-accent);
+}
+
 .about-container {
   display: flex;
   justify-content: left;
@@ -76,7 +109,7 @@ h1 {
   max-width: 100%;
   height: auto;
 
-  border: 0.3rem solid;
+  border: 0.3rem solid var(--color-accent);
 }
 
 /*
