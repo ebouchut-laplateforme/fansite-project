@@ -79,6 +79,7 @@ ol.timeline > li::before {
   content: "";
   position: absolute;
   left: 13px; /* Shift left ~ the same size as the circle below */
+
   /* (width == height) + border-radius = 50% => circle! */
   width: 14px;
   height: 14px;
@@ -124,16 +125,15 @@ ol.timeline > li::before {
   /* Desktop */
 }
 
-@media screen and (768px <=width < 1024px) {
+@media screen and (768px <= width < 1024px) {
   /* Tablet */
-  
 }
 
 @media screen and (width < 768px) {
   /* Mobile */
 
   .about-container {
-    /* TODO: Consider using another flex layout to bubble the image up */ 
+    /* Push the artist photo to the bottom */
     flex-wrap: wrap;
   }
 
