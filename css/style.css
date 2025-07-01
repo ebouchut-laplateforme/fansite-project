@@ -1,9 +1,13 @@
-/* Main CSS Styles shared among all? pages */
+/* Main CSS Styles shared among all pages */
 
 /* ~~~~~ Color Theme */
 
 :root {
-  --color-background: white;
+  --color-background: white; /* CSS variable definition */
+  /* Usage: var(--color-background) will be replaced with white
+   * Example:
+   *    background-color: var(--color-background);
+   */
   --color-text: black;
   --color-heading: black;
   --color-link: blue;
@@ -45,6 +49,8 @@ h1 {
 }
 
 .menu-container > li {
+  /* TODO: Make the navigation links look like buttons.
+
   border: 0.2rem solid var(--color-border);
   border-radius: 0.2rem;;
 
@@ -53,18 +59,17 @@ h1 {
   margin-right: 0.5rem;
 
   background-color: var(--color-background);
-
 }
 
 
 a.nav-item.selected {
-  /* Remove underline from menu item links when selected  */
+  /* Remove the underline from the links of selected menu items  */
   text-decoration: none;
   color: var(--color-heading);
 }
 
 .tagline {
-  font-size: smaller;
+  /* The fan site's slogan (aka. tagline) is a smaller text, italicized, and centered */
   font-style: italic;
   text-align: center;
 }
@@ -72,7 +77,8 @@ a.nav-item.selected {
 /* ~~~~ (Career) Timeline */
 
 ol.timeline {
-  position: relative;
+    /* Serve as the origin for children positioned using `position: absolute;` */
+  position:     relative;
   padding-left: 40px;
 
   /* Remove the numeric index in front of the list items */
@@ -80,20 +86,29 @@ ol.timeline {
 }
 
 ol.timeline::before {
-  content: ""; /* Add a pseudo element that serves as an "anchor" to  position ol on the left */ 
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
+  /* Add an empty pseudo element that serves as an "anchor/origin" to  position the ol */
+  content:    "";
+  position:   absolute;
+
+  /* Position/Shift the list 20 px on the left */
+  left:       20px;
+  top:        0;
+  bottom:     0;
+
+  /* Note: to get a vertical line we set a width and a background color  */
+  width:      2px;
   background: var(--color-heading);
 }
 
 ol.timeline > li::before {
-  content: "";
-  position: absolute;
-  left: 13px; /* Shift left ~ the same size as the circle below */
+  /* Add an empty text before each list item (required for positioning) */
+  content:       "";
 
+  /* Position each list item 13 px to the left of its relatively positioned parent (ol) */
+  position:      absolute;
+  left:          13px; /* Shift left ~ the same size as the circle below (-1px to keep a 1px  gap in between) */
+
+  /* Add a circle before each list item (on the left) /*
   /* (width == height) + border-radius = 50% => circle! */
   width: 14px;
   height: 14px;
@@ -122,9 +137,9 @@ ol.timeline > li::before {
 }
 
 .artist-photo {
-  /* Can be overridden in the fansite CSS */
+  /* Can be overridden in the fan site's CSS */
   max-width: 100%;
-  height: auto;
+  height:    auto;
 
   border: 0.3rem solid var(--color-border);
 }
