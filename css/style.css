@@ -45,6 +45,9 @@ h1 {
 }
 
 .menu-container > li {
+  border: 0.2rem solid var(--color-border);
+  border-radius: 0.2rem;;
+
   /* Add a bit of space between items of the navigation menu */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -52,6 +55,12 @@ h1 {
   background-color: var(--color-background);
 
 }
+
+
+a.nav-item.selected {
+  /* Remove underline from menu item links when selected  */
+  text-decoration: none;
+  color: var(--color-heading);
 }
 
 .tagline {
