@@ -8,7 +8,7 @@
   --color-heading: black;
   --color-link: blue;
   --color-accent: blue;
-  --color-border: #f0e5f0;
+  --color-border: #f0e5f0; /* TODO: Use a color that fits well in the default color scheme  */
 }
 
 body {
@@ -48,6 +48,10 @@ h1 {
   /* Add a bit of space between items of the navigation menu */
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+
+  background-color: var(--color-background);
+
+}
 }
 
 .tagline {
