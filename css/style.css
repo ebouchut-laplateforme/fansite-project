@@ -163,14 +163,17 @@ ol.timeline > li::before {
   ~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
-@media screen and (width >=1024px) {
+/* @media screen and (min-width: 1025px) { */
+@media screen and (width >= 1025px) {
   /* Desktop */
 }
 
+/* @media screen and (min-width: 768px  max-width: 1024px) {  */
 @media screen and (768px <= width < 1024px) {
   /* Tablet */
 }
 
+/* @media screen and (max-width: 767px) { */
 @media screen and (width < 768px) {
   /* Mobile */
 
